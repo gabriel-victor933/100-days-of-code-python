@@ -22,11 +22,16 @@ drawer.penup()
 
 num_state = 0
 
+guessed = []
+
 while num_state < 50:
     state = screen.textinput(f"{num_state}/50 State Correct","Insert the name of the state: ").lower()
 
     if state == 'exit':
         break
+
+    if state in guessed:
+        continue
 
     if state in lower_state:
 
@@ -38,7 +43,7 @@ while num_state < 50:
 
         num_state += 1
 
-        lower_state.remove(state)
+        guessed.append(state)
 
         time.sleep(0.5)
     
