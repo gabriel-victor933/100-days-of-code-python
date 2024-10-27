@@ -5,7 +5,7 @@ import time
 data = pandas.read_csv("day-25/50_states.csv")
 
 states = data['state'].to_list()
-lower_state = list(map(lambda text: text.lower(),states))
+lower_state = [state.lower() for state in states]
 
 x_cord = data['x'].to_list()
 y_cord = data['y'].to_list()
