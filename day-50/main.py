@@ -1,9 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import os
+from dotenv import load_dotenv
 
-facebook_email = 'rihacos172@lineacr.com'
-facebook_password = '100code123'
+load_dotenv()
+
+facebook_email = os.environ['FACEBOOK_EMAIL']
+facebook_password = os.environ['FACEBOOK_PASSWORD']
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option('detach', True)
