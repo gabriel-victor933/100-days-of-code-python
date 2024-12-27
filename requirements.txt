@@ -165,4 +165,3 @@ zipp==3.20.2
 Bootstrap_Flask==2.2.0
 WTForms==3.0.1
 Flask_WTF==1.2.1
-
